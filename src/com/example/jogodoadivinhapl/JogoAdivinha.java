@@ -85,4 +85,17 @@ public class JogoAdivinha {
 		}
 		return ret;
 	}//colDeJogadasParaFrase
+	
+	public String estadoParaFrase (){
+		String ret="";
+		
+		switch (mEstado){
+			case JOGO_NAO_INICIADO: ret="Jogo não começado"; break;
+			case JOGO_PEDE_MAIOR: ret="Jogador deve jogar maior"; break;
+			case JOGO_PEDE_MENOR: ret="Jogador deve jogar menor"; break;
+			case JOGO_TERMINADO: ret="Jogo terminado"; break;
+		}//switch
+		
+		return ret;
+	}//estadoParaFrase
 }
