@@ -51,4 +51,20 @@ public class JogoAdivinha {
 		mTentativas=0;
 		mEstado=EstadoDoJogo.JOGO_NAO_INICIADO;
 	}//JogoAdivinha
+	
+	public String estadoDoJogoEnquantoFrase (){
+		String ret="";
+		
+		ret+="mMin= "+mMin+"\n";
+		ret+="mMax= "+mMax+"\n";
+		ret+="mNumSorteado= "+mNumSorteado+"\n";
+		ret+="mUltimoNumJogado= "+ ((mUltimoNumJogado==NENHUM)?
+				"Ainda nenhum\n"
+				:
+				mUltimoNumJogado+"\n");
+		ret+="mTentativas= "+mTentativas+"\n";
+		ret+="mColJogadas= "+colDeJogadasParaFrase()+"\n";
+		ret+="mEstado= "+estadoParaFrase()+"\n";
+		return ret;
+	}//estadoDoJogoEnquantoFrase
 }
