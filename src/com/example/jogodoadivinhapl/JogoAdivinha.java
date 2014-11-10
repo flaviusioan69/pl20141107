@@ -67,4 +67,22 @@ public class JogoAdivinha {
 		ret+="mEstado= "+estadoParaFrase()+"\n";
 		return ret;
 	}//estadoDoJogoEnquantoFrase
+	
+	public String colDeJogadasParaFrase (){
+		String ret="";
+		if (mColJogadas!=null){
+			int quantasJogadas=mColJogadas.size();
+			int enderecoPrimeiro=0;
+			int enderecoUltimo=quantasJogadas-1;
+			
+			for (int passeador=enderecoPrimeiro ; passeador<=enderecoUltimo; passeador++){
+				Integer valor=mColJogadas.get(passeador);
+				ret+="\tElemento #"+passeador+" = "+valor+"\n";
+			}//for
+		}//
+		else{
+			ret="Sem jogadas";
+		}
+		return ret;
+	}//colDeJogadasParaFrase
 }
